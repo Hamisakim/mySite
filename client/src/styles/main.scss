@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+$backgroundColor: #1f1522;
+
+
+body {
+  height: 100%;
+  overflow: auto;
+  background-color: $backgroundColor;
+  font-family: 'Varela Round', sans-serif;
+  color: gold;
+}
+body {
+  overscroll-behavior: none;
+}
+.hero{
+  width:100vw;
+  // height: 60vh;
+}
+.homepage{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+.brand-statement{
+  font-weight: 50;
+  color: #548681e5;
+}
+
+.devicon-container {
+  color: gold;
+  margin: 0;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ol{
+    padding: 0%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+li{
+  margin: 1rem;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  transition: transform .3s ease;
+  // border: 1px red solid;
+}
+li:hover{
+  // border: 1px red solid;
+  transform: scale(1.5);
+  
+}
+
+
+  .devicon {
+    fill: gold;
+    width: 6rem;
+  }
+}
+}
+
+
+.projects-container{
+  padding: 2rem;
+  .project-details-container{
+    img{
+      max-width: 600px;
+      border-radius: 7px;
+      transition: transform .6s ease;
+      
+      // width: 50rem;
+    }
+    img:hover{
+      transform: scale(1.1);
+    }
+  }
+  .doodler{
+    text-align: right;
+  }
+}
