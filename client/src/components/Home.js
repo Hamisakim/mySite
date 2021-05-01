@@ -27,13 +27,11 @@ const Home = () => {
               element: '|'
             }}>
             <span>{'const me = {'}</span>
-                              
             <br/>
             <span>&nbsp;&nbsp;&nbsp;&nbsp;firstName: &#39;Sami&#39;,</span>
             <br/>
             <span>&nbsp;&nbsp;&nbsp;&nbsp;lastName: &#39;Hakim&#39;,</span>
             <br/>
-            
             <span>&nbsp;&nbsp;&nbsp;&nbsp;species: &#39;Wookie</span>
             <Typist.Backspace count={6} delay={200} />
             <span>Human&#39;,</span>
@@ -41,14 +39,7 @@ const Home = () => {
             <span>&nbsp;&nbsp;&nbsp;&nbsp;job: &#39;Full-stack Developer&#39;</span>
             <br/>
             <span>{' }'}</span>
-            
-         
-            {/* <Typist.Backspace count={20} delay={500} />
-            <span>Human</span>
-            <Typist.Backspace count={15} delay={500} />
-            <span>Full-stack Developer</span> */}
           </Typist>
-
         </div>
 
 
@@ -92,6 +83,7 @@ const Home = () => {
             </ol>
           </div>
         </ScrollAnimation>
+      
       </div> 
 
   

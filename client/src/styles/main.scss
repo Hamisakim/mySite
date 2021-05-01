@@ -13,13 +13,18 @@ body {
 body {
   overscroll-behavior: none;
 }
+
+
 .hero{
-  width:100vw;
+  // width:100vw;
+  padding: 2rem;
   // height: 60vh;
   font-family: Menlo, Monaco, 'Courier New', monospace;
-
-  // font-family: Arial, Helvetica, sans-serif;
   color:white;
+  text-align: left;
+  display: flex;
+justify-content: center;
+
   .Typist .Cursor {
     display: inline-block;
     &--blinking {
@@ -32,9 +37,9 @@ body {
       }
     }
   }
-
-
 }
+
+
 .homepage{
   // display: flex;
   // align-items: center;
