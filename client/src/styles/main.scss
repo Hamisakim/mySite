@@ -1,114 +1,235 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/grid/columns.sass";
+$lighterBlue: #1e49d4;
+$lightBlue: #1e49d4;
+$darkBlue: #0d3e8a;
 
-$backgroundColor: #1f1522;
+$green: #1ed460;
+$black: #01050a;
+$backgroundColor: #0d3e8a;
+$textColor: $green;
 
+// $backgroundColor: #1f1522;
+$hoverBlue: rgb(0, 255, 242);
 
 body {
-  height: 100%;
+  // height: 100vh;
   overflow: auto;
-  background-color: $backgroundColor;
-  font-family: 'Varela Round', sans-serif;
-  color: gold;
-}
-body {
+  font-family: "Varela Round", sans-serif;
+  color: $textColor;
   overscroll-behavior: none;
+  // width: 100vw;
+  margin: 0;
 }
 
+.navbar {
+  z-index: 10;
 
-.hero{
+  min-width: 100vw;
+  height: 5vh;
+  background-color: $lighterBlue;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+
+  .navbar-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      padding: 4px;
+      margin: 0 10px;
+      text-decoration: none;
+      color: $textColor;
+    }
+  }
+}
+
+.hero {
   // width:100vw;
-  padding: 2rem;
-  // height: 60vh;
-  font-family: Menlo, Monaco, 'Courier New', monospace;
-  color:white;
+  padding: 1rem;
+  height: 16vh;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  color: $textColor;
   text-align: left;
   display: flex;
-justify-content: center;
+  justify-content: center;
 
   .Typist .Cursor {
     display: inline-block;
+    color: $textColor;
     &--blinking {
       opacity: 1;
       animation: blink 1s linear infinite;
       @keyframes blink {
-        0% { opacity:1; }
-        50% { opacity:0; }
-        100% { opacity:1; }
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
       }
     }
   }
 }
 
+.homepage {
+  margin-top: 2rem;
+  // background-color: lineargrad
+  background-color: $backgroundColor;
 
-.homepage{
   // display: flex;
   // align-items: center;
   // flex-direction: column;
 
-.brand-statement{
-  font-weight: 50;
-  color: #548681e5;
-}
+  .brand-statement {
+    font-weight: 50;
+    color: #548681e5;
+  }
 
-.devicon-container {
-  color: gold;
-  margin: 0 auto;
-  width: 50vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  
-  ol{
-    padding: 0%;
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
+  .devicon-container {
+    color: $textColor;
+    margin: 0 auto;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-li{
-  margin: 1rem;
-  display:flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
+    ol {
+      width: 70vw;
+      padding: 0%;
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
 
-  transition: transform .3s ease;
-  // border: 1px red solid;
-}
-li:hover{
-  // border: 1px red solid;
-  transform: scale(1.5);
-  
-}
+    li {
+      margin: 1rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
 
+      transition: transform 0.3s ease;
 
-  .devicon {
-    fill: gold;
-    width: 6rem;
+      fill: $textColor;
+      width: 6rem;
+      // border: 1px red solid;
+    }
+    li:hover {
+      // border: 1px red solid;
+      transform: scale(1.5);
+    }
+
+    .devicon {
+      // fill: gold;
+      // width: 6rem;
+    }
   }
 }
-}
 
+.projects-container {
+  // padding: 2rem;
+  text-align: center;
+  h1 {
+    margin: 0;
+  }
+  .project-details-container {
+    margin: 2rem 0;
 
-.projects-container{
-  padding: 2rem;
-  .project-details-container{
-    img{
-      max-width: 600px;
+    h1 {
+      margin: 0;
+    }
+
+    img {
+      width: 50%;
+      // max-width: 600px;
       border-radius: 7px;
-      transition: transform .6s ease;
-      
+      transition: transform 0.6s ease;
+      // animation: heartbeat 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both
       // width: 50rem;
     }
-    img:hover{
+
+    img:hover {
       transform: scale(1.1);
+      box-shadow: 0px 0px 10px 0px $hoverBlue;
+    }
+
+    .devicon-project {
+      fill: $lighterBlue;
+      height: 50px;
+      margin-bottom: -10px;
+      transition: transform 0.3s ease;
+    }
+
+    .devicon-project:hover {
+      transform: scale(1.2);
+      fill: $hoverBlue;
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 2rem;
     }
   }
-  .doodler{
-    text-align: right;
+
+  .monomelody {
+    // background-color: rgba(223, 243, 2, 0.829);
+  }
+
+  .doodler {
+    // text-align: right;
   }
 }
 
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+
+.contact {
+  background-color: $black;
+  a {
+    text-decoration: none;
+    color: $green;
+    fill: $green;
+  }
+
+  ol {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-contact {
+    width: 50px;
+  }
+}

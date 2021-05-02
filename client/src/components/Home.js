@@ -5,6 +5,7 @@ import 'animate.css/animate.min.css'
 import Projects from './Projects'
 import MouseParticles from 'react-mouse-particles'
 import Typist from 'react-typist'
+import Contact from './Contact'
 
 const Home = () => {
 
@@ -14,9 +15,10 @@ const Home = () => {
 
   return (
     <>
-      <MouseParticles g={1} life={0.5} color={['gold'] }cull="devicon-container,no-mouse-effect"/>
-
+      <MouseParticles g={0} life={0.2} color={['#3dca37','#01050a'] }cull="devicon-container,no-mouse-effect"/>
+      
       <div className='homepage'>
+        
         <div className='hero'>
           <Typist 
             startDelay={1000}
@@ -38,57 +40,55 @@ const Home = () => {
             <br/>
             <span>&nbsp;&nbsp;&nbsp;&nbsp;job: &#39;Full-stack Developer&#39;</span>
             <br/>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;{'interests: [\'Music\',\'Gaming\',\'Reading\']'}</span>
+            <br/>
+
             <span>{' }'}</span>
           </Typist>
         </div>
 
 
 
-        <ScrollAnimation animateIn='fadeIn'
-          animateOut='fadeOut'
-          offset={300} >
-          <section className='about-section'>
-            <div className='brand-statement' >
-              <p>
-                {brandStatement}
-              </p>
-            </div>
-          </section>
-        </ScrollAnimation >
+        <section className='about-section'>
+          <div className='brand-statement' >
+            <p>
+              {brandStatement}
+            </p>
+          </div>
+        </section>
 
        
         
-        <h1>Projects</h1>
-        <Projects/>
+       
+        <Projects />
 
         <ScrollAnimation 
           offset={300}
           animateIn='flipInX'>
-          <div className='devicon-container' >
+          <div id='tech' className='devicon-container' >
             <h1>The tech I use</h1>
-            <ol>
-              <li><DevIcon className='devicon' icon='git' />Git</li>
-              <li><DevIcon className='devicon' icon='nodejs' />Node.js</li>
-              <li><DevIcon className='devicon' icon='javascript' />JavaScript</li>
-              <li><DevIcon className='devicon' icon='sass' />Sass</li>
-              <li><DevIcon className='devicon' icon='react' />React Hooks</li>
-              <li><DevIcon className='devicon' icon='python' />Python</li>
-              <li><DevIcon className='devicon' icon='html5' />HTML5</li>
-              <li><DevIcon className='devicon' icon='css3' />CSS3</li>
-              <li><DevIcon className='devicon' icon='github' />Github</li>
-              <li><DevIcon className='devicon' icon='npm' />npm</li>
-              <li><DevIcon className='devicon' icon="mongodb" />MongoDb</li>
-              <li><DevIcon className='devicon' icon="heroku" />Heroku</li>
-              <li><DevIcon className='devicon' icon="postgresql" />PostgreSQL</li>
+            <ol className='icon-list'>
+              <li className='devicon '><DevIcon  icon='git' />Git</li>
+              <li className='devicon '><DevIcon  icon='nodejs' />Node.js</li>
+              <li className='devicon '><DevIcon  icon='javascript' />JavaScript</li>
+              <li className='devicon '><DevIcon  icon='sass' />Sass</li>
+              <li className='devicon '><DevIcon  icon='react' />React Hooks</li>
+              <li className='devicon '><DevIcon  icon='python' />Python</li>
+              <li className='devicon '><DevIcon  icon='html5' />HTML5</li>
+              <li className='devicon '><DevIcon  icon='css3' />CSS3</li>
+              <li className='devicon '><DevIcon  icon='github_badge' />Github</li>
+              <li className='devicon '><DevIcon  icon='npm' />npm</li>
+              <li className='devicon '><DevIcon  icon="mongodb" />MongoDb</li>
+              <li className='devicon '><DevIcon  icon="heroku" />Heroku</li>
+              <li className='devicon '><DevIcon  icon="postgresql" />PostgreSQL</li>
             </ol>
           </div>
         </ScrollAnimation>
       
+        <Contact/>
+
+      
       </div> 
-
-  
- 
-
     </>
   )
 }
