@@ -7,7 +7,7 @@ const Navbar = () => {
         <a href='#projects'>Projects</a>
         <a href='#tech'>Tech skills</a>
         
-        <a href='#contact'>Contact</a>
+        <a href='#contact'>Get in touch</a>
         <a href='#about'>About</a>
         <a href=''>Start</a>
         <a href=''>experience?</a>
