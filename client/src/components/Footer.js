@@ -1,14 +1,16 @@
 import React from 'react'
+// eslint-disable-next-line no-unused-vars
 
 const Footer = () => {
   return (
-    <footer>
-      {`Sami Hakim  ${new Date().getFullYear()}`}
+    <>
+      <footer>
+        This is the end
+        {`Sami Hakim  ${new Date().getFullYear()}`}
       
+      </footer>
 
-
-    </footer>
-      
+    </>
 
   )
 }

@@ -8,6 +8,9 @@ import Typist from 'react-typist'
 import Contact from './Contact'
 import heroDesktopImg from '../assets/bg.png'
 import express from '../assets/express.svg'
+import ParticlesBg from './particlesBG'
+import MoreAbout from './MoreAbout'
+// import ContactForm from './contactForm/ContactForm'
 
 
 
@@ -23,6 +26,7 @@ const Home = () => {
   //animate__fadeOut
   
   const handleTypingEnded = () => {
+
     if (scrollPosition < 130 ){
       setTimeout(() => {
         window.scroll({
@@ -33,7 +37,7 @@ const Home = () => {
 
       setTimeout(() => {
         setTypingEnded(true)
-      }, 1500)
+      }, 1000)
     }
   }
 
@@ -52,16 +56,27 @@ const Home = () => {
   }, [])
 
 
-
+  // const styles = {
+  //   height: '200px',
+  //   width: '50%',
+  //   margin: '10px',
+  //   padding: '4px',
+  //   backgroundColor: '#EEE',
+  //   position: 'relative'
+  // }
   
+
+
+
   return (
     <>
-      <MouseParticles g={0} life={0.2} color={['#3dca37','#01050a'] }cull="devicon-container,no-mouse-effect"/>
+      <ParticlesBg/>
+
+      <MouseParticles g={0} life={0.2} color={['#3dca37','#01050a'] }cull="no-mouse-effect"/>
       
       <div className='homepage'>
-        
-        <div className={!typingEnded ? 'hero' : 'hide' }>
-          {/* <div className='hero'> */}
+        {/* <div className={!typingEnded ? 'hero' : 'hide' }>  */}
+        <div className='hero'>
           <img className='desktop-img'
             src={heroDesktopImg}/>
                     
@@ -80,11 +95,11 @@ const Home = () => {
             <br/>
             <span>&nbsp;&nbsp;&nbsp;&nbsp;lastName: &#39;Hakim&#39;,</span>
             <br/>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;species: &#39;Wookie</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;species: &#39;Cyborg</span>
             <Typist.Backspace count={6} delay={200} />
             <span>Human&#39;,</span>
             <br/>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;job: &#39;Full-stack Developer&#39;</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;career: &#39;Full-stack Developer&#39;</span>
             <br/>
             <span>&nbsp;&nbsp;&nbsp;&nbsp;{'hobbies: [\'Music\',\'Travel\',\'Reading\']'}</span>
             <br/>
@@ -110,11 +125,10 @@ const Home = () => {
         
        
         <Projects />
-
-        <ScrollAnimation 
-          offset={300}
-          animateIn='flipInX'>
-          <div id='tech' className='devicon-container' >
+        <div id='tech' className='devicon-container' >
+          <ScrollAnimation 
+            offset={300}
+            animateIn='flipInX'>
             <h1>The tech I use</h1>
             <ol className='icon-list'>
               <li className='devicon '><DevIcon  icon='javascript' />JavaScript</li>
@@ -134,13 +148,12 @@ const Home = () => {
               <li className='devicon '><DevIcon  icon="heroku" />Heroku</li>
               {/* <li className='devicon '><DevIcon  icon="yarn" /></li> */}
             </ol>
-          </div>
-        </ScrollAnimation>
-
-
+          </ScrollAnimation>
+        </div>
 
         <Contact/>
-      
+        <MoreAbout />
+
       </div> 
     </>
   )
