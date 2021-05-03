@@ -7,9 +7,10 @@ import MouseParticles from 'react-mouse-particles'
 import Typist from 'react-typist'
 import Contact from './Contact'
 import heroDesktopImg from '../assets/bg.png'
-import express from '../assets/express.svg'
 import ParticlesBg from './particlesBG'
 import MoreAbout from './MoreAbout'
+import Experience from './Experience'
+import Tech from './Tech'
 // import ContactForm from './contactForm/ContactForm'
 
 
@@ -22,11 +23,9 @@ const Home = () => {
 
   // eslint-disable-next-line no-unused-vars
   const [typingEnded, setTypingEnded] = useState(false)
-  //if the code has ended then give them the class and animate out 
-  //animate__fadeOut
-  
-  const handleTypingEnded = () => {
 
+  //* this will autoscroll if user has not already scrolled away from top of page
+  const handleTypingEnded = () => {
     if (scrollPosition < 130 ){
       setTimeout(() => {
         window.scroll({
@@ -34,7 +33,6 @@ const Home = () => {
           behavior: 'smooth'
         })
       }, 1000) 
-
       setTimeout(() => {
         setTypingEnded(true)
       }, 1000)
@@ -65,8 +63,6 @@ const Home = () => {
   //   position: 'relative'
   // }
   
-
-
 
   return (
     <>
@@ -115,6 +111,7 @@ const Home = () => {
           <div className='brand-statement' >
             <p>
               {brandStatement}
+              <a  href='#more-about'> See more</a>
             </p>
           </div>
 
@@ -125,35 +122,16 @@ const Home = () => {
         
        
         <Projects />
-        <div id='tech' className='devicon-container' >
-          <ScrollAnimation 
-            offset={300}
-            animateIn='flipInX'>
-            <h1>The tech I use</h1>
-            <ol className='icon-list'>
-              <li className='devicon '><DevIcon  icon='javascript' />JavaScript</li>
-              <li className='devicon '><DevIcon  icon='html5' />HTML5</li>
-              <li className='devicon '><DevIcon  icon='css3' />CSS3</li>
-              <li className='devicon '><DevIcon  icon='sass' />Sass</li>
-              <li className='devicon '><DevIcon  icon="mongodb" />MongoDb</li>
-              <li className='devicon '><img src={express}/>Express</li>
-              <li className='devicon '><DevIcon  icon='react' />React Hooks</li>
-              <li className='devicon '><DevIcon  icon='nodejs' />Node.js</li>
-              <li className='devicon '><DevIcon  icon='python' />Python</li>
-              <li className='devicon '><DevIcon  icon="postgresql" />PostgreSQL</li>
-              <li className='devicon '><DevIcon  icon="django" />Django</li>
-              <li className='devicon '><DevIcon  icon='git' />Git</li>
-              <li className='devicon '><DevIcon  icon='github_badge' />Github</li>
-              <li className='devicon '><DevIcon  icon='npm' />npm</li>
-              <li className='devicon '><DevIcon  icon="heroku" />Heroku</li>
-              {/* <li className='devicon '><DevIcon  icon="yarn" /></li> */}
-            </ol>
-          </ScrollAnimation>
-        </div>
 
+        
+        <Tech DevIcon={DevIcon}/>
+        <Experience/>
         <Contact/>
-        <MoreAbout />
-
+        <ScrollAnimation
+          offset={300}
+          animateIn='flipInX'>
+          <MoreAbout />
+        </ScrollAnimation>
       </div> 
     </>
   )

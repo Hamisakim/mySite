@@ -11,7 +11,11 @@ const Projects = () => {
   
   return (
     <div id='projects' className='projects-container'>
-      <h1>Projects</h1>
+      <ScrollAnimation animateIn='animate__fadeIn'
+        animateOut='animate__fadeOutLeft'
+        offset={100} ><h1 className='project-header'> Projects</h1>
+      </ScrollAnimation>
+
       <ScrollAnimation animateIn='animate__fadeInLeft'
         animateOut='animate__fadeOutLeft'
         offset={150} >

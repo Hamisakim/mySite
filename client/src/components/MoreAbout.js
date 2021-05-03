@@ -1,14 +1,14 @@
 import React from 'react'
 import picture from '../assets/Cropped Linkedin.png'
-
+import coder from '../assets/busycoder-yellow.png'
 
 const MoreAbout = () => {
   return (
-    <div className='more-about'>
+    <div id='more-about'  className='more-about'>
       <h1>A little more about me!</h1>
       <p>
 
-      I love making listening and discovering new music, Lego, anything with an engine, F1, space travel, blockchain and crypto-currency in general, crime thrillers, airsoft, dancing, action-comedies, single-malt scotch, Oxford comma, puns, and video games.
+      Things: music, F1, anything with an engine, Lego, space travel, earth travel, Star Wars, blockchain, crypto-currency, crime thrillers, dancing, airsoft, action-comedies, single-malts, Oxford comma, puns, video games, and ...coding! duh!       <img className='coder' src={coder} />
       
     
 
