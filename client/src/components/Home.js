@@ -7,7 +7,7 @@ import Projects from './Projects'
 import MouseParticles from 'react-mouse-particles'
 import Typist from 'react-typist'
 import Contact from './Contact'
-import heroDesktopImg from '../assets/bg.png'
+// import heroDesktopImg from '../assets/bg.png'
 import ParticlesBg from './particlesBG'
 import MoreAbout from './MoreAbout'
 import Experience from './Experience'
@@ -81,7 +81,7 @@ const Home = () => {
           
         <div className='hero'>
           <img className='desktop-img'
-            src={heroDesktopImg}/>
+          />
 
           <Typist 
             onTypingDone={()=>handleTypingEnded()}
