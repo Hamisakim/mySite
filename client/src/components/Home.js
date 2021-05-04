@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState,useEffect } from 'react'
 import DevIcon from 'devicon-react-svg'
 import ScrollAnimation from 'react-animate-on-scroll'
@@ -6,14 +7,23 @@ import Projects from './Projects'
 import MouseParticles from 'react-mouse-particles'
 import Typist from 'react-typist'
 import Contact from './Contact'
-import heroDesktopImg from '../assets/bg.png'
+// import heroDesktopImg from '../assets/bg.png'
 import ParticlesBg from './particlesBG'
 import MoreAbout from './MoreAbout'
 import Experience from './Experience'
 import Tech from './Tech'
 // import ContactForm from './contactForm/ContactForm'
 
-
+import blobby  from './fish/blobby.gif'
+import fish0 from './fish/fish0.gif'
+import fishes  from './fish/fishes.gif'
+import goldfish  from './fish/goldfish.gif'
+import mantaRay from './fish/manta-ray.gif'
+import jellyfish  from './fish/jellyfish.gif'
+import shark  from './fish/shark.gif'
+import squid0  from './fish/squid0.gif'
+import squid1  from './fish/squid1.gif'
+import sub  from './fish/sub.gif'
 
 const Home = () => {
 
@@ -39,7 +49,6 @@ const Home = () => {
     }
   }
 
-    
   const [scrollPosition, setScrollPosition] = useState(0)
 
   const handleScroll = () => {
@@ -53,7 +62,6 @@ const Home = () => {
     }
   }, [])
 
-
   // const styles = {
   //   height: '200px',
   //   width: '50%',
@@ -62,20 +70,19 @@ const Home = () => {
   //   backgroundColor: '#EEE',
   //   position: 'relative'
   // }
-  
 
   return (
     <>
       <ParticlesBg/>
-
       <MouseParticles g={0} life={0.2} color={['#3dca37','#01050a'] }cull="no-mouse-effect"/>
-      
+
       <div className='homepage'>
         {/* <div className={!typingEnded ? 'hero' : 'hide' }>  */}
+          
         <div className='hero'>
           <img className='desktop-img'
-            src={heroDesktopImg}/>
-                    
+          />
+
           <Typist 
             onTypingDone={()=>handleTypingEnded()}
             startDelay={1000}
@@ -102,36 +109,111 @@ const Home = () => {
 
             <span>{' }'}</span>
           </Typist>
-        </div>
-
-
-
-        <div id='about' className='about-section'>
-          <h1>A little about me...</h1>
-          <div className='brand-statement' >
-            <p>
-              {brandStatement}
-              <a  href='#more-about'> See more</a>
-            </p>
+        </div>      
+        <ScrollAnimation initiallyVisible={false}
+          offset={200}
+          animateIn='animate__rotateInUpLeft'
+          animateOut='animate__backOutLeft'>
+          <div id='about' className='about-section'>
+            <h1>A little about me...</h1>
+            <div className='brand-statement' >
+              <p>
+                {brandStatement}
+                <a  href='#more-about'> See more</a>
+              </p>
+            </div>
           </div>
 
 
+
+
+
+
+
+        
+        </ScrollAnimation>
+
+        <ScrollAnimation initiallyVisible={false}
+          offset={200}
+          animateIn='animate__rotateInUpLeft'
+
+          animateOut='animate__backOutLeft'>
+          <div className='fish jellyfish '>
+            <img src={jellyfish} />
+          </div>
+        </ScrollAnimation>
+
+        {/* {        <div className='fish '>
+          <img src={blobby} />
         </div>
 
-       
-        
-       
+        <div className='fish '>
+          <img src={fish0} />
+        </div>
+
+        <div className='fish '>
+          <img src={fishes} />
+        </div>
+
+        <div className='fish '>
+          <img src={goldfish} />
+        </div>
+
+        <div className='fish '>
+          <img src={mantaRay} />
+        </div>
+
+
+ 
+
+        <div className='fish '>
+          <img src={squid0} />
+        </div>
+
+        <div className='fish '>
+          <img src={squid1} />
+        </div>
+
+       */}
+
         <Projects />
 
-        
+        <ScrollAnimation 
+          initiallyVisible={true}
+          offset={200}
+          animateOut='animate__fadeOutBottomRight'>
+          <div className='fish fish-right'>
+            <img src={sub} />
+          </div>
+        </ScrollAnimation>
+      
         <Tech DevIcon={DevIcon}/>
         <Experience/>
         <Contact/>
-        <ScrollAnimation
-          offset={300}
-          animateIn='flipInX'>
-          <MoreAbout />
+
+        <ScrollAnimation initiallyVisible={false}
+          offset={100}
+          animateIn='animate__rotateInUpLeft'
+        >
+          <div className='fish fish-right bottom-squid'>
+            <img src={squid0} />
+          </div>
         </ScrollAnimation>
+
+
+        <div className='z-index'>
+          <ScrollAnimation className=''
+            offset={300}
+            animateIn='flipInX'>
+            <MoreAbout />
+          </ScrollAnimation>
+        
+      
+        </div>
+
+       
+
+
       </div> 
     </>
   )

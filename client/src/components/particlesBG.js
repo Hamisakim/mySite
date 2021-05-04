@@ -10,7 +10,7 @@ const ParticlesBg = () => {
       params={{
         'particles': {
           'number': {
-            'value': 20,
+            'value': 25,
             'density': {
               'enable': true
             }
@@ -21,11 +21,11 @@ const ParticlesBg = () => {
 
           },
           'size': {
-            'value': 20,
+            'value': 30,
             'random': true,
             'anim': {
-              'speed': 5,
-              'size_min': 0.4
+              'speed': 100,
+              'size_min': 90
             }
           },
           'line_linked': {

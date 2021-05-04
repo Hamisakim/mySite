@@ -9,9 +9,11 @@ const App = () => {
   return (
     <>
       <Navbar/>
+      <div className='nyan-container'>
+        <NyanScrollBar className='z-index' draggable  targetAxis="horizontal" />
+      </div>
       <Home/>
       <Footer/>
-      <NyanScrollBar className='z-index' draggable targetAxis="horizontal" />
     </>
   )
 

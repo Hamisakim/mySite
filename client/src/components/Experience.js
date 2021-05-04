@@ -12,15 +12,8 @@ const Experience = () => {
       </div>
       <div className='xp-detail warner-music'>
         <h1>Warner Music</h1>
-        <ol>
-          <li>
-            <p>Managed online stores for  Warner 
+        <p>Managed online stores for  Warner 
               Records and Parlophone roster. Artists include Muse, Liam Gallagher, Dua Lipa, Coldplay, and Gorillaz.</p>
-          </li> 
-          <li> 
-            <p>Seven number 1 albums with a large proportion of units sold through online stores.</p>
-          </li>
-        </ol>
       </div>
 
       

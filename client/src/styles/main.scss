@@ -9,7 +9,8 @@ $green: #1ed460;
 $black: #01050a;
 $backgroundColor: #0d3e8a;
 $textColor: $green;
-$sectionsBg: #2867c5f2;
+$sectionsBg: #2867c5ca;
+// $sectionsBg: #2867c5f2;
 // $greenBG: rgba(31, 83, 92, 0.9);
 
 
@@ -29,9 +30,12 @@ body {
   // background-color: $backgroundColor;
 
   background: rgb(2,0,36);
-background: linear-gradient(0deg, rgba(2,0,36,1) 4%, rgba(9,75,205,1) 63%, rgba(4,149,232,1) 85%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 10%, rgba(9,75,205,1) 63%, rgba(4,149,232,1) 85%, rgba(0,162,179,1) 100%);
 }
-
+.nyan-container{
+  position:relative;
+  z-index: 10000;
+}
 .navbar {
   z-index: 1000;
   display: flex;
@@ -116,10 +120,10 @@ background: linear-gradient(0deg, rgba(2,0,36,1) 4%, rgba(9,75,205,1) 63%, rgba(
   }
 
   .about-section {
-    z-index: 50;
+    z-index: 250;
     position: relative;
 
-    height: 20rem;
+    min-height: 20rem;
     width: 80%;
 
     display: flex;
@@ -127,13 +131,12 @@ background: linear-gradient(0deg, rgba(2,0,36,1) 4%, rgba(9,75,205,1) 63%, rgba(
     align-items: center;
     flex-direction: column;
 
-    background-color: $sectionsBg;
     border-radius: 50px;
     margin: 0 auto;
     margin-bottom: 2rem;
     padding: 2rem;
 
-    // width: 80vw;
+    width: 80vw;
     h1{font-size: 50px;}
   
     .brand-statement {
@@ -163,6 +166,7 @@ background: linear-gradient(0deg, rgba(2,0,36,1) 4%, rgba(9,75,205,1) 63%, rgba(
     z-index: 50;
     position: relative;
     // padding: 2rem;
+    margin-top: 10vh;
     text-align: center;
     // display: flex;
     // justify-content: center;
@@ -208,8 +212,7 @@ background: linear-gradient(0deg, rgba(2,0,36,1) 4%, rgba(9,75,205,1) 63%, rgba(
         width: 70%;
         border-radius: 10px;
         transition: transform 0.6s ease;
-        // animation: heartbeat 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both
-        // width: 50rem;
+
       }
   
       img:hover {
@@ -321,7 +324,7 @@ background: linear-gradient(0deg, rgba(2,0,36,1) 4%, rgba(9,75,205,1) 63%, rgba(
     padding-top: 1rem;
   
     margin: 0 auto;
-    margin-bottom: 100vh; //!
+    margin-bottom: 20vh; //!
     margin-top: 20vh;
     
     border-radius: 50px;
@@ -376,18 +379,33 @@ background: linear-gradient(0deg, rgba(2,0,36,1) 4%, rgba(9,75,205,1) 63%, rgba(
       }
     }
   }
+  .experience{
+.xp-detail{}
 
+
+
+  }
+  
+  
+  
+
+
+  
   .more-about{
+    z-index: 500;
+    position:relative;
+    
     text-align:center;
-    background-color: $sectionsBg;
+    background-color: rgba(255, 238, 0, 0.479);
     width: 80%;
     margin: 0 auto;
+    margin-bottom: 20vh; //!
+    color: black;
 
     border-radius: 50px;
 
     p{
     font-size: 20px;
-
       width: 60%;
       margin: 0 auto;
       text-align:justify
@@ -404,37 +422,6 @@ background: linear-gradient(0deg, rgba(2,0,36,1) 4%, rgba(9,75,205,1) 63%, rgba(
 
 }
 
-
-// @media only screen and (max-width: 1440) {
-//   .Typist {
-//     padding-top: 7.5rem;
-//     margin-left: -3rem;
-//     position: absolute;
-//   }
-// }
-@keyframes heartbeat {
-  from {
-    transform: scale(1);
-    transform-origin: center center;
-    animation-timing-function: ease-out;
-  }
-  10% {
-    transform: scale(0.91);
-    animation-timing-function: ease-in;
-  }
-  17% {
-    transform: scale(0.98);
-    animation-timing-function: ease-out;
-  }
-  33% {
-    transform: scale(0.87);
-    animation-timing-function: ease-in;
-  }
-  45% {
-    transform: scale(1);
-    animation-timing-function: ease-out;
-  }
-}
 
 
 
@@ -473,7 +460,7 @@ footer {
 .particles-wrapper {
   position: absolute;
   width: 100vw;
-  height: 4500px;
+  height: 5500px;
   top: 0;
   z-index: 1;
 }
@@ -481,4 +468,29 @@ footer {
 .z-index {
   position: relative;
   z-index: 10000 !important;
+}
+.fish{
+  position: absolute;
+  z-index: 2 ;
+  width: 100%;
+
+  img{
+    width:10rem;
+  }
+
+}
+.fish-right{
+  text-align: end;
+}
+.bottom-squid{
+  position: fixed;
+  // margin-top: 39rem;
+  
+  filter: brightness(50%)
+} .shark{
+  padding-top:17px;
+  text-align: left;
+} .jellyfish{
+  filter: brightness(150%)
+  opacity(0.6)
 }
