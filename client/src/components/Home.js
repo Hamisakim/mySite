@@ -37,15 +37,16 @@ const Home = () => {
   //* this will autoscroll if user has not already scrolled away from top of page
   const handleTypingEnded = () => {
     if (scrollPosition < 130 ){
+
+      setTimeout(() => {
+        setTypingEnded(true)
+      }, 1500)      
       setTimeout(() => {
         window.scroll({
-          top: 800,
+          top: 200,
           behavior: 'smooth'
         })
       }, 1000) 
-      setTimeout(() => {
-        setTypingEnded(true)
-      }, 1000)
     }
   }
 
@@ -74,12 +75,12 @@ const Home = () => {
   return (
     <>
       <ParticlesBg/>
-      <MouseParticles g={0} life={0.2} color={['#3dca37','#01050a'] }cull="no-mouse-effect"/>
+      <MouseParticles g={-5} life={0.5} color={['#38adec','#8c9cac'] }cull="no-mouse-effect"/>
 
       <div className='homepage'>
-        {/* <div className={!typingEnded ? 'hero' : 'hide' }>  */}
+        <div className={!typingEnded ? 'hero' : 'hide' }> 
           
-        <div className='hero'>
+          {/* <div className='hero'> */}
           <img className='desktop-img'
           />
 
@@ -98,31 +99,31 @@ const Home = () => {
             <br/>
             <span>&nbsp;&nbsp;&nbsp;&nbsp;lastName: &#39;Hakim&#39;,</span>
             <br/>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;species: &#39;Cyborg</span>
-            <Typist.Backspace count={6} delay={200} />
-            <span>Human&#39;,</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;species: &#39;Human</span>
+            {/* <Typist.Backspace count={6} delay={200} /> */}
+            {/* <span>Human&#39;,</span> */}
             <br/>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;career: &#39;Full-stack Developer&#39;</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;currently: &#39;Full-stack Developer&#39;</span>
             <br/>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;{'hobbies: [\'Music\',\'Travel\',\'Reading\']'}</span>
+            {/* <span>&nbsp;&nbsp;&nbsp;&nbsp;{'hobbies: [\'Music\',\'Travel\',\'Reading\']'}</span> */}
             <br/>
 
             <span>{' }'}</span>
           </Typist>
         </div>      
-        <ScrollAnimation initiallyVisible={false}
+        {/* <ScrollAnimation initiallyVisible={false}
           offset={200}
           animateIn='animate__rotateInUpLeft'
-          animateOut='animate__backOutLeft'>
-          <div id='about' className='about-section'>
-            <h1>A little about me...</h1>
-            <div className='brand-statement' >
-              <p>
-                {brandStatement}
-                <a  href='#more-about'> See more</a>
-              </p>
-            </div>
+          animateOut='animate__backOutLeft'> */}
+        <div id='about' className='about-section'>
+          <h1>A little about me...</h1>
+          <div className='brand-statement' >
+            <p>
+              {brandStatement}
+              <a  href='#more-about'> See more</a>
+            </p>
           </div>
+        </div>
 
 
 
@@ -131,7 +132,7 @@ const Home = () => {
 
 
         
-        </ScrollAnimation>
+        {/* </ScrollAnimation> */}
 
         <ScrollAnimation initiallyVisible={false}
           offset={200}
@@ -181,7 +182,10 @@ const Home = () => {
         <ScrollAnimation 
           initiallyVisible={true}
           offset={200}
-          animateOut='animate__fadeOutBottomRight'>
+          animateOut='animate__fadeOutBottomRight'
+          animateOnce={true}
+        >
+            
           <div className='fish fish-right'>
             <img src={sub} />
           </div>

@@ -4,10 +4,11 @@ import React from 'react'
 const Footer = () => {
   return (
     <>
-      <footer>
+      <footer className='footer'>
+        <div className='footer-items'>
         This is the end
-        {`Sami Hakim  ${new Date().getFullYear()}`}
-      
+          {`Sami Hakim  ${new Date().getFullYear()}`}
+        </div>
       </footer>
 
     </>

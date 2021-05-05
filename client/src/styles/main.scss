@@ -13,11 +13,13 @@ $sectionsBg: #2867c5ca;
 // $sectionsBg: #2867c5f2;
 // $greenBG: rgba(31, 83, 92, 0.9);
 
-
 // $textColor: $green;
 
 // $backgroundColor: #1f1522;
 $hoverBlue: rgb(0, 255, 242);
+.hide {
+  display: none;
+}
 
 body {
   // height: 100vh;
@@ -29,26 +31,32 @@ body {
   margin: 0;
   // background-color: $backgroundColor;
 
-  background: rgb(2,0,36);
-  background: linear-gradient(0deg, rgb(0, 0, 0) 10%, rgba(9,75,205,1) 63%, rgba(4,149,232,1) 85%, rgba(0,162,179,1) 100%);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    0deg,
+    rgb(0, 0, 0) 10%,
+    rgba(9, 75, 205, 1) 63%,
+    rgba(4, 149, 232, 1) 85%,
+    rgba(0, 162, 179, 1) 100%
+  );
 }
-.nyan-container{
-  position:relative;
-  z-index: 10000;
-}
+
 .navbar {
   z-index: 1000;
+  position: fixed; //!
+  top: 0; //!
+  min-width: 100vw;
+  height: 8vh;
+  // overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 100vw;
-  height: 5vh;
+
+  background-color: rgb(53, 7, 7);
   background-color: $lighterBlue;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
 
-
+  // border-bottom-right-radius: 80%;
+  // border-bottom-left-radius: 80%;
 
   .navbar-items {
     display: flex;
@@ -90,7 +98,7 @@ body {
     }
 
     .Typist {
-      z-index: 50;
+      z-index: 500;
       position: relative;
       padding-top: 150px;
 
@@ -120,7 +128,7 @@ body {
   }
 
   .about-section {
-    z-index: 250;
+    z-index: 500;
     position: relative;
 
     min-height: 20rem;
@@ -137,8 +145,10 @@ body {
     padding: 2rem;
 
     width: 80vw;
-    h1{font-size: 50px;}
-  
+    h1 {
+      font-size: 50px;
+    }
+
     .brand-statement {
       font-weight: 50;
       // color: #548681e5;
@@ -152,89 +162,95 @@ body {
         text-align: justify;
         margin: 0;
         width: 80vw;
-              }
-              a{
-                text-decoration:none;
-                color: $textColor;
-              }a:hover{
-                color: $hoverBlue;
-              }
+      }
+      a {
+        text-decoration: none;
+        color: $textColor;
+      }
+      a:hover {
+        color: $hoverBlue;
+      }
     }
   }
 
   .projects-container {
-    z-index: 50;
+    z-index: 500;
     position: relative;
     // padding: 2rem;
     margin-top: 10vh;
+    margin-bottom: 10vh;
     text-align: center;
     // display: flex;
     // justify-content: center;
     // align-items: center;
     // flex-direction: column;
-  
-    h1{font-size: 50px;
-    // background-color: rgba(9, 39, 135, 0.612)
-  }
+
+    h1 {
+      font-size: 50px;
+      // background-color: rgba(9, 39, 135, 0.612)
+    }
     p {
       margin: 0;
       margin-bottom: 2rem;
-      font-size: 20px;
+      font-size: 26px;
     }
-  
+
     .project-details-container {
-      z-index: 50;
+      z-index: 500;
       position: relative;
       width: 80%;
-      
+
       margin: 0 auto;
-      margin-top: 2rem ;
+      margin-top: 2rem;
       padding-top: 32px;
       padding-bottom: 2rem;
-  
+
       background-color: $sectionsBg;
+      // border: 2px $green dashed;
       border-radius: 50px;
-      
-  
-     
-      h1{
+      box-shadow: 0px 0px 10px 0px $hoverBlue;
+
+      border-radius: 50px;
+      background-color: #3f51b578;
+      box-shadow: 0px 0px 10px 0px $hoverBlue;
+
+      h1 {
         font-size: 50px;
         background: none;
       }
-      
+
       built-with-icon h1 {
-        z-index: 50;
+        z-index: 500;
         position: relative;
         margin: 0;
       }
-  
+
       img {
         width: 70%;
         border-radius: 10px;
         transition: transform 0.6s ease;
-
       }
-  
+
       img:hover {
         transform: scale(1.1);
         box-shadow: 0px 0px 10px 0px $hoverBlue;
       }
-  
+
       .devicon-project {
         fill: $black;
-        height: 50px;
+        height: 60px;
         margin-bottom: -10px;
         transition: transform 0.3s ease;
       }
-  
+
       .devicon-project:hover {
         transform: scale(1.2);
         fill: $hoverBlue;
       }
-  
+
       .built-with-icon {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        margin: 0 1rem;
       }
       .built-with-icon:hover {
         box-shadow: none;
@@ -242,110 +258,136 @@ body {
       }
       .express-icon-small {
         height: 50px;
-        transform: scale(1.2);
+        fill: black;
+        // transform: scale(1.2);
       }
     }
-  
+
     .monomelody {
       // background-color: rgba(223, 243, 2, 0.829);
     }
-  
+
     .doodler {
       // text-align: right;
     }
   }
+  .tech {
 
-
-  .devicon-container {
-    z-index: 50;
-    position: relative;
-    color: $textColor;
-    margin: 0 auto;
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    ol {
-      width: 70vw;
-      padding: 0%;
-      list-style: none;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-
-    li {
-      z-index: 150;
+      z-index: 500;
       position: relative;
-      margin: 1rem;
+      color: $textColor;
+      margin: 0 auto;
+      width: 50vw;
       display: flex;
-      justify-content: center;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
 
-      transition: transform 0.3s ease;
-
-      fill: $textColor;
-      width: 6rem;
-      // border: 1px red solid;
-
-      img {
-        height: 96px;
+      ol {
+        width: 70vw;
+        padding: 0%;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
       }
-    }
-    li:hover {
-      // border: 1px red solid;
-      transform: scale(1.5);
-    }
 
-    .devicon {
-      color: $textColor;
-      fill: $green;
-      // background-color:#2867c5f2;
-      // border-radius:  10px;
-      
-      // fill: gold;
-      // width: 6rem;
+      li {
+        z-index: 500;
+        position: relative;
+        margin: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        transition: transform 0.3s ease;
+
+        fill: $textColor;
+        width: 6rem;
+        // border: 1px red solid;
+
+        img {
+          height: 96px;
+        }
+      }
+      li:hover {
+        // border: 1px red solid;
+        transform: scale(1.5);
+      }
+
+      .devicon {
+        color: $textColor;
+        fill: $green;
+        // background-color:#2867c5f2;
+        // border-radius:  10px;
+
+        // fill: gold;
+        // width: 6rem;
+      }
+
+  }
+
+  .experience {
+    display:relative;
+    z-index: 500;
+    
+    width: 80vw;
+    margin: 0 auto;
+
+    text-align:center;
+
+
+
+    .xp-detail { 
+      display:relative;
+      z-index: 1500;
+      // text-align: justify;
+      background-color: #3f51b5;//!
+      border-radius: 50px;
+
+      margin: 0 auto;
+      margin-top: 2rem;
+      padding-top: 32px;
+      padding-bottom: 2rem;
     }
   }
+
   .contact {
-    z-index: 50;
+    z-index: 500;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: baseline;
-  
+
     height: 20vh;
     width: 80%;
-    padding: 0;
-    padding-top: 1rem;
-  
+    padding: 1rem 0;
+
     margin: 0 auto;
     margin-bottom: 20vh; //!
     margin-top: 20vh;
-    
+
     border-radius: 50px;
-    background-color: rgba(31, 83, 92, 0.708);
-  
+    background-color: #3f51b5e0;
+    box-shadow: 0px 0px 10px 0px $hoverBlue;
+
     .contact-items {
-  
       h1 {
         text-align: center;
       }
-  
+
       a {
         // display: flex;
         // justify-content: center;
         // align-self: center;
       }
-  
+
       .contact-buttons {
         // width: 2rem;
         display: flex;
-  
+
         .icon-contact {
           width: 70px;
           // height: 50px;
@@ -359,17 +401,16 @@ body {
           transform: scale(1.4);
           fill: $hoverBlue;
         }
-  
+
         .github-icon-contact {
           width: 80px;
           margin-top: -0.9rem;
-  
         }
         .linkedin-icon {
           // margin-top: 5px;
           // text-align: center;
         }
-  
+
         .twitter-icon:hover {
           // width: 45px;
           color: $hoverBlue;
@@ -379,51 +420,37 @@ body {
       }
     }
   }
-  .experience{
-.xp-detail{}
 
 
-
-  }
-  
-  
-  
-
-
-  
-  .more-about{
+  .more-about {
     z-index: 500;
-    position:relative;
-    
-    text-align:center;
-    background-color: rgba(255, 238, 0, 0.479);
+    position: relative;
+    z-index: 500;
+
+    text-align: center;
     width: 80%;
     margin: 0 auto;
     margin-bottom: 20vh; //!
-    color: black;
+    color: $textColor;
 
-    border-radius: 50px;
-
-    p{
-    font-size: 20px;
+    p {
+      font-size: 20px;
       width: 60%;
       margin: 0 auto;
-      text-align:justify
+      text-align: justify;
     }
-    img{ 
+    img {
       border-radius: 50px;
       width: 15rem;
+      position: relative;
+      filter: brightness(0.7);
     }
-    .coder{
-      height:20px;
+    .coder {
+      height: 20px;
       width: auto;
     }
   }
-
 }
-
-
-
 
 #about {
   scroll-margin-top: 50px;
@@ -440,57 +467,58 @@ body {
 #more-about {
   scroll-margin-top: 50px;
 }
-footer {
-  position: relative;
-  z-index: 50;
-
-  height: 7vh;
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  background-color: $black;
-  border-top: rgb(34, 8, 92) 1px solid;
-}
-.hide {
-  display: none;
-}
 
 .particles-wrapper {
   position: absolute;
   width: 100vw;
   height: 5500px;
   top: 0;
-  z-index: 1;
+  z-index: 0;
 }
 
-.z-index {
-  position: relative;
-  z-index: 10000 !important;
-}
-.fish{
+// .z-index {
+//   position: relative;
+//   z-index: 10000 !important;
+// }
+.fish {
   position: absolute;
-  z-index: 2 ;
+  z-index: 2;
   width: 100%;
 
-  img{
-    width:10rem;
+  img {
+    width: 10rem;
   }
-
 }
-.fish-right{
+.fish-right {
   text-align: end;
 }
-.bottom-squid{
+.bottom-squid {
   position: fixed;
   // margin-top: 39rem;
-  
-  filter: brightness(50%)
-} .shark{
-  padding-top:17px;
+
+  filter: brightness(50%);
+}
+.shark {
+  padding-top: 17px;
   text-align: left;
-} .jellyfish{
-  filter: brightness(150%)
-  opacity(0.6)
+}
+.jellyfish {
+  filter: brightness(150%) opacity(0.6);
+}
+.nyan-container {
+  position: relative;
+  z-index: 5000;
+}
+.footer {
+  position: relative;
+  // bottom: 0;
+  z-index: 1000;
+  height: 7vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $black;
+  border-top: rgb(34, 8, 92) 1px solid;
 }

@@ -7,7 +7,7 @@ import express from '../assets/express.svg'
 const Tech = ({ DevIcon }) => {
   
   return (
-    <div id='tech' className='devicon-container' >
+    <div id='tech' className='devicon-container tech' >
       <ScrollAnimation 
         offset={300}
         animateIn='flipInX'>

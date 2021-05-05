@@ -1,15 +1,38 @@
-import React from 'react'
+import React,{ useEffect, useState } from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
 import monoMelodyImg from '../assets/MonoMelody.gif'
 import doodlerImg from '../assets/doodler.png'
 import HungrySharkImg from '../assets/hungryshark.gif'
 import DevIcon from 'devicon-react-svg'
-import express from '../assets/express.svg'
+import express from '../assets/expressBlack.svg'
 
 import shark  from './fish/shark.gif'
+import 'animate.css/animate.min.css'
 
 const Projects = () => {
-   
+
+  const [sharkVisible, setSharkVisible] = useState()
+  console.log('🐝 ~ sharkVisible', sharkVisible)
+  
+  useEffect(()=>{
+    const sharkVis = (visible) => {
+      console.log('🐝 ~ 🔴', visible)
+    }
+    sharkVis()
+  },[])
+  const [animation, setAnimation] = useState('')
+  const handleShark = (visible) => {
+    console.log('🐝 ~ visible', visible)
+    setAnimation(true)
+
+    if (visible.inViewport)
+      setSharkVisible(true)
+  }
+  
+
+
+
+
   return (
     <div id='projects' className='projects-container'>
       <ScrollAnimation animateIn='animate__fadeIn'
@@ -65,11 +88,14 @@ const Projects = () => {
         offset={150}
         
         animateIn='animate__fadeInRight animate__slower'
+        afterAnimatedIn={handleShark}
         animateOut='animate__backOutLeft animate__slower'
         animatePreScroll={false}
       >
        
-        <div className='fish shark'>
+        {/* <div className='fish shark'> */}
+        <div className={animation ? 'fish shark animate__zoomOutLeft' : 'fish shark'}>
+        
           <img src={shark} />
         </div>
         
@@ -86,7 +112,7 @@ const Projects = () => {
           <div className='hungry-shark project-details-container'>
             <h1>Hungry Shark<a href='https://github.com/Hamisakim/HungryShark'><DevIcon className='devicon-project' icon='github_badge' /></a></h1>
             <p>Pac-man with a twist <br/>this was a 1 week solo project built with:<br/>
-              <div className='built-with'>
+              <div className='built-with animate__fadeOutLeft'>
                 <DevIcon className='built-with-icon' icon='javascript' />
                 <DevIcon className='built-with-icon' icon='css3' />
                 <DevIcon className='built-with-icon' icon='html5' />
