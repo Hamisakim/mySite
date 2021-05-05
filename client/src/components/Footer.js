@@ -6,8 +6,8 @@ const Footer = () => {
     <>
       <footer className='footer'>
         <div className='footer-items'>
-        This is the end
-          {`Sami Hakim  ${new Date().getFullYear()}`}
+          <p>This is the end</p>
+          <h2>{`Sami Hakim  ${new Date().getFullYear()}`}</h2>
         </div>
       </footer>
 

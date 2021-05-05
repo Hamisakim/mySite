@@ -1,21 +1,39 @@
-import React from 'react'
+/* eslint-disable no-unused-vars */
+import React,{  useState } from 'react'
 import DevIcon from 'devicon-react-svg'
 // eslint-disable-next-line no-unused-vars
 import twitter from '../assets/twitterlogo.svg'
 import ScrollAnimation from 'react-animate-on-scroll'
 import 'animate.css/animate.min.css'
-
 const Contact = () => {
+
+
+  const handleCopyEmail = () => {
+    const copyText = 'samishakim@gmail.com'
+    window.clipboardData.setData('samishakim@gmail.com')
+    alert('Copied email to clipboard ' + copyText.value)
+  }
+
+
+  const [copySuccess, setCopySuccess] = useState('')
+  console.log('🐝 ~ copySuccess', copySuccess)
+  const copyToClipBoard = async () => {
+    try {
+      await navigator.clipboard.writeText('samishakim@gmail.com')
+      setCopySuccess('Copied!')
+      alert('Email copied: samishakim@gmail.com')
+    } catch (err) {
+      alert('Error')
+    }
+  }
+
+
+
   return (
     <div id='contact' className='contact'>
       <div className='contact-items'>
-        <h1>Get in touch 😀</h1>
-
+        <a href='#contact'><h1>Get in touch 😀</h1></a>
         <div className='contact-buttons'>
-          
-
-
-
           <ScrollAnimation
             offset={10}
             duration={1}
@@ -24,15 +42,18 @@ const Contact = () => {
               <DevIcon className='icon-contact linkedin-icon' icon='linkedin' />
             </a>
           </ScrollAnimation>
-
-
           <ScrollAnimation
             offset={10}
             duration={1}
             animateIn='animate__slideInUp'>
-            <a target="_blank" href='mailto:samishakim@gmail.com' rel="noreferrer"><DevIcon className='icon-contact' icon='email' /></a>
-          </ScrollAnimation>
+            <div className='email-icon-container'>
+              <a target="_blank" href='mailto:samishakim@gmail.com' rel="noreferrer"><DevIcon className='icon-contact email-icon' icon='email' />
+              </a>
+              <h4 className='contact-mailto' onClick={copyToClipBoard}>Mail to - click here to copy!
+              </h4>
 
+            </div>
+          </ScrollAnimation>
           <ScrollAnimation
             offset={10}
             duration={1}
@@ -60,10 +81,6 @@ const Contact = () => {
               </svg>
             </a>
           </ScrollAnimation>
-
-
- 
-          
           <ScrollAnimation
             offset={10}
             duration={1}
@@ -71,17 +88,10 @@ const Contact = () => {
             <a className='github-icon-contact' target="_blank" href='https://www.github.com/hamisakim' rel="noreferrer">
               <DevIcon className='icon-contact github-icon-contact ' icon='github' />
             </a>
-
           </ScrollAnimation>
-
         </div>
       </div>
-
-
-
-      
     </div>
   )
 }
-
 export default Contact

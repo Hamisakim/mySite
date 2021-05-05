@@ -3,15 +3,15 @@ import ScrollAnimation from
   'react-animate-on-scroll'
 import 'animate.css/animate.min.css'
 import express from '../assets/express.svg'
-
 const Tech = ({ DevIcon }) => {
-  
   return (
     <div id='tech' className='devicon-container tech' >
       <ScrollAnimation 
         offset={300}
         animateIn='flipInX'>
-        <h1>The tech I use</h1>
+        <a href='#tech'>
+          <h1>The tech I use</h1>
+        </a>
         <ol className='icon-list'>
           <li className='devicon '><DevIcon  icon='javascript' />JavaScript</li>
           <li className='devicon '><DevIcon  icon='html5' />HTML5</li>
@@ -34,5 +34,4 @@ const Tech = ({ DevIcon }) => {
     </div>
   )
 }
-
 export default Tech
