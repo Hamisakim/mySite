@@ -75,7 +75,7 @@ const Projects = () => {
               <DevIcon className='built-with-icon' icon='sass' />  
             </div>  
             <a href='https://monomelody.herokuapp.com/'>
-              <img src={monoMelodyImg} />
+              <img  src={monoMelodyImg} />
             </a>
           </p> 
         </div>
@@ -101,7 +101,7 @@ const Projects = () => {
               </div>
             </p>
             <a href='https://doodler.netlify.app/'>
-              <img src={doodlerImg} />
+              <img className='doodler-img' src={doodlerImg} />
             </a>
           </div>
         </div>
