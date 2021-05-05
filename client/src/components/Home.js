@@ -39,6 +39,8 @@ const Home = () => {
   }, [])
   //* this will autoscroll if user has not already scrolled away from top of page
   const handleTypingEnded = () => {
+    setTypingEnded(true)
+
     if (scrollPosition < 130 ){
       setTimeout(() => {
         setTypingEnded(true)
