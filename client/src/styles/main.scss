@@ -67,6 +67,8 @@ body {
   background-color: $lighterBlue;
   // border-bottom-right-radius: 80%;
   // border-bottom-left-radius: 80%;
+  box-shadow: 0px 0px 5px 0px $hoverBlue;
+  ;
   .navbar-items {
     display: flex;
     justify-content: center;
@@ -393,7 +395,9 @@ body {
     background-color: $sectionsBgDark;
     box-shadow: 0px 0px 10px 0px $hoverBlue;
     .contact-items {
+      height: 80%;
       h1 {
+        font-size: 40px;
         text-align: center;
         margin-top: 0;
       }
