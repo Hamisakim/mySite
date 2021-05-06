@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from './components/Footer'
 import Home from './components/Home'
-import Navbar from './components/Navbar'
+import Navbar from './components/navbar/Navbar'
 // import { NyanScrollBar  } from 'react-nyan-stroller'
 import 'animate.css'
 const App = () => {
