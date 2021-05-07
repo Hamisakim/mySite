@@ -5,6 +5,9 @@ import DevIcon from 'devicon-react-svg'
 import twitter from '../assets/twitterlogo.svg'
 import ScrollAnimation from 'react-animate-on-scroll'
 import 'animate.css/animate.min.css'
+
+
+
 const Contact = () => {
 
 
@@ -91,6 +94,7 @@ const Contact = () => {
           </ScrollAnimation>
         </div>
       </div>
+    
     </div>
   )
 }

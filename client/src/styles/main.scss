@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
-@import "bulma/sass/utilities/_all.sass";
-@import "bulma/sass/grid/columns.sass";
+// @import "bulma/sass/utilities/_all.sass";
+// @import "bulma/sass/grid/columns.sass";
 $lighterBlue: #1e49d4;
 $lightBlue: #1e49d4;
 $darkBlue: #0d3e8a;
@@ -73,6 +73,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.5rem;
     a {
       padding: 4px;
       margin: 0 10px;
@@ -86,15 +87,14 @@ body {
     }
   }
 
-  @media only screen and (max-width: 768px) {
-    @import "bulma/sass/grid/columns.sass";
-    .navbar-items{
-      display:none;
-    }
+  // @media only screen and (max-width: 768px) {
+  //   // @import "bulma/sass/grid/columns.sass";
+  //   .navbar-items{
+  //     display:none;
+  //   }
 
 
-
-  }
+  // }
 }
 
 
@@ -118,15 +118,15 @@ body {
         margin: 0;
       }
       h1 {
-        font-size: 2rem; //?----
+        font-size: 4rem; //?----
       }
       h2 {
-        font-size: 40px;
+        font-size: 3rem;
       }
       .down-arrow-btn {
-        font-size: 90px;
+        font-size: 10rem;
         margin: 0 auto;
-        width: 90px;
+        // width: 2rem;
       }
       .down-arrow-btn:hover {
         transform: scale(1.8);
@@ -138,16 +138,14 @@ body {
       // position: relative;
       padding: 1rem;
       font-family: Menlo, Monaco, "Courier New", monospace;
+      font-size: 2rem;
       color: $textColor;
       text-align: left;
       display: flex;
       justify-content: center;
       align-items: center;
       padding-top: 150px;
-      .desktop-img {
-        z-index: 50;
-        border-radius: 7px;
-      }
+
       .Typist {
         margin: 0 auto;
         color: rgb(0, 0, 0);
@@ -156,7 +154,7 @@ body {
         text-align: center;
         margin-left: -3rem;
         position: absolute;
-        min-width: 80%;
+        width: 80%;
       }
       .Typist .Cursor {
         display: inline-block;
@@ -193,6 +191,10 @@ body {
     margin-bottom: 2rem;
     padding: 2rem;
     width: 80vw;
+
+    background-color: #3f51b578;
+    box-shadow: 0px 0px 10px 0px $hoverBlue;
+
     h1 {
       font-size: 2rem; //?----
     }
@@ -250,13 +252,12 @@ body {
       padding-bottom: 2rem;
       background-color: $sectionsBg;
       // border: 2px $green dashed;
-      border-radius: 50px;
       box-shadow: 0px 0px 10px 0px $hoverBlue;
       border-radius: 50px;
       background-color: #3f51b578;
       box-shadow: 0px 0px 10px 0px $hoverBlue;
       h1 {
-        font-size: 2rem; //?----
+        font-size: 2.6rem; //?----
         background: none;
       }
       built-with-icon h1 {
@@ -586,7 +587,7 @@ body {
 
 @media only screen and (max-width: 768px) {
   body {
-    background-color: red;
+    background-color: rgb(67, 3, 70);
   }
 
   .particles-wrapper {
