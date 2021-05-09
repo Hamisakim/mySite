@@ -6,7 +6,7 @@ import twitter from '../assets/twitterlogo.svg'
 import ScrollAnimation from 'react-animate-on-scroll'
 import 'animate.css/animate.min.css'
 
-
+import picture from '../assets/Cropped Linkedin.png'
 
 const Contact = () => {
 
@@ -94,7 +94,8 @@ const Contact = () => {
           </ScrollAnimation>
         </div>
       </div>
-    
+      <img className='linkedin-img' src={picture} />
+
     </div>
   )
 }
