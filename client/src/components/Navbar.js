@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import { layoutGenerator } from 'react-break'
-
+import '../styles/navbar.scss'
 const Navbar = () => {
   // get break point and make hidden in here or in csss? 
   // show lines on break point
@@ -42,12 +42,17 @@ const Navbar = () => {
             <a href='#contact'>Get in touch</a>
             <a href=''>Restart</a>
           </div>
-          <div onClick={() => {
-            setIsActive(!isActive)
-          }}className={`navbar-burger burger ${isActive ? 'is-active' : ''}`} aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true">x</span>
-            <span aria-hidden="true">x</span>
-            <span aria-hidden="true">x</span>
+          
+          <div
+            className={`navbar-burger burger ${isActive ? 'is-active' : ''}`} 
+            onClick={() => {
+              setIsActive(!isActive) 
+            }}
+          
+          >
+            <span className="burger-line"></span>
+            <span className="burger-line"></span>
+            <span className="burger-line"></span>
           </div>
         </nav>
 

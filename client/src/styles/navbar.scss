@@ -1,0 +1,13 @@
+.mob-nav {
+  .mob-nav-items {
+    z-index: 1000;
+    position: relative;
+  }
+  .burger {
+    .burger-line {
+      width: 2rem;
+      height: 1rem;
+      background-color: red;
+    }
+  }
+}
