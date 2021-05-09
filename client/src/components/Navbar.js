@@ -11,15 +11,14 @@ const Navbar = () => {
 
   const layout = layoutGenerator({
     mobile: 0,
-    phablet: 550,
-    tablet: 768,
+    tablet: 600,
     desktop: 992
   })
   console.log('🐝 ~ layout', layout)
 
   const OnMobile = layout.is('mobile')
   const OnAtLeastTablet = layout.isAtLeast('tablet')
-  const OnAtMostPhablet = layout.isAtMost('phablet')
+  // const isAtLeastPhablet = layout.isAtLeast('phablet')
   const OnDesktop = layout.is('desktop')
 
 
@@ -38,19 +37,18 @@ const Navbar = () => {
       <OnMobile>
 
         <nav className='mob-nav'>
-          <div id="nav-icon3"
-            className={`navbar-burger ${isActive ? 'open' : ''}`} 
-            onClick={handleBurger}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+          <div className='burger'>
+            <div id="nav-icon3"
+              className={`${isActive ? 'open' : ''}`} 
+              onClick={handleBurger}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
-          {/* <div className='mob-nav-brand'>
-              🦈
-          </div> */}
-          <div className='mob-nav-items dropdown'>
+          <div className={`mob-nav-items dropdown ${!isActive ? 'hide' : ''}`}>
             <a href='#about'>About</a>
             <a href='#projects'>Projects</a>
             <a href='#tech'>Tech skills</a>
@@ -58,33 +56,8 @@ const Navbar = () => {
             <a href='#contact'>Get in touch</a>
             <a href=''>Restart</a>
           </div>
-          
-
-
-          {/* <div
-            className={`navbar-burger burger ${isActive ? 'is-active' : ''}`} 
-            onClick={() => {
-              setIsActive(!isActive) 
-            }}
-          
-          >
-            <span className="burger-line">s</span>
-            <span className="burger-line"></span>
-            <span className="burger-line"></span>
-          </div> */}
         </nav>
-
-
-
-
-
-
-
       </OnMobile>
-
-
-
-
 
       <OnAtLeastTablet>
         <nav className='navbar'>
