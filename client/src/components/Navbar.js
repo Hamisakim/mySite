@@ -37,8 +37,20 @@ const Navbar = () => {
       <OnMobile>
 
         <nav className='mob-nav'>
-          <div className='burger'>
-            <div id="nav-icon3"
+          <div className=''>
+            <button 
+              className={`hamburger--collapse hamburger ${isActive ? 'is-active' : ''}`}
+              type="button"
+              onClick={handleBurger}
+            >
+              <span className="hamburger-box">
+                <span className="hamburger-inner"></span>
+              </span>
+            </button>
+
+
+
+            {/* <div id="nav-icon3"
               className={`${isActive ? 'open' : ''}`} 
               onClick={handleBurger}
             >
@@ -46,7 +58,7 @@ const Navbar = () => {
               <span></span>
               <span></span>
               <span></span>
-            </div>
+            </div> */}
           </div>
           <div className={`mob-nav-items dropdown ${!isActive ? 'hide' : ''}`}>
             <a href='#about'>About</a>
