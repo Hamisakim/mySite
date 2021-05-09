@@ -38,6 +38,7 @@ $hoverBlue: rgb(0, 255, 242);
 body {
   // height: 100vh;
   overflow: auto;
+  overflow-x: hidden;
   font-family: "Varela Round", sans-serif;
   color: $textColor;
   overscroll-behavior: none;
@@ -68,7 +69,6 @@ body {
   // border-bottom-right-radius: 80%;
   // border-bottom-left-radius: 80%;
   box-shadow: 0px 0px 5px 0px $hoverBlue;
-  ;
   .navbar-items {
     display: flex;
     justify-content: center;
@@ -253,7 +253,6 @@ body {
         transition: transform 0.6s ease;
         // border: 2px $textColor solid;
         box-shadow: 0px 0px 10px 0px $textColor;
-
       }
       img:hover {
         transform: scale(1.1);
@@ -281,26 +280,26 @@ body {
         height: 50px;
         fill: black;
         border: none;
-        box-shadow:none;
+        box-shadow: none;
         // transform: scale(1.2);
       }
     }
     .monomelody {
       // background-color: rgba(223, 243, 2, 0.829);
       margin-top: 0rem;
-      img{
+      img {
         box-shadow: 0px 0px 10px 0px orange;
       }
     }
     .doodler {
       // text-align: right;
-      .doodler-img{
+      .doodler-img {
         box-shadow: 0px 0px 10px 0px rgb(0, 255, 166);
       }
     }
     .hungry-shark {
       // text-align: right;
-      img{
+      img {
         box-shadow: 0px 0px 10px 0px rgb(255, 0, 0);
       }
     }
@@ -425,19 +424,19 @@ body {
           background-color: $hoverBlue;
           fill: $hoverBlue;
         }
-        .email-icon-container{
+        .email-icon-container {
           color: red;
           text-align: center;
-          h4{
+          h4 {
             margin: 0 auto;
-            color:rgba(0, 0, 0, 0);
-          }
-        }.email-icon-container:hover{
-          h4{
-            color:$hoverBlue;
+            color: rgba(0, 0, 0, 0);
           }
         }
-
+        .email-icon-container:hover {
+          h4 {
+            color: $hoverBlue;
+          }
+        }
       }
     }
   }

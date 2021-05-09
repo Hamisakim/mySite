@@ -25,16 +25,32 @@ const Navbar = () => {
 
   const [isActive, setIsActive] = React.useState(false)
   console.log('🐝 ~ isActive', isActive)
+
+  const handleBurger = () => {
+    console.log('clicked')
+    setIsActive(!isActive)
+  }
+
+
   return (
     <>
  
       <OnMobile>
 
         <nav className='mob-nav'>
-          <div className='mob-nav-brand'>
-              🦈
+          <div id="nav-icon3"
+            className={`navbar-burger ${isActive ? 'open' : ''}`} 
+            onClick={handleBurger}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-          <div className='mob-nav-items'>
+          {/* <div className='mob-nav-brand'>
+              🦈
+          </div> */}
+          <div className='mob-nav-items dropdown'>
             <a href='#about'>About</a>
             <a href='#projects'>Projects</a>
             <a href='#tech'>Tech skills</a>
@@ -43,17 +59,19 @@ const Navbar = () => {
             <a href=''>Restart</a>
           </div>
           
-          <div
+
+
+          {/* <div
             className={`navbar-burger burger ${isActive ? 'is-active' : ''}`} 
             onClick={() => {
               setIsActive(!isActive) 
             }}
           
           >
+            <span className="burger-line">s</span>
             <span className="burger-line"></span>
             <span className="burger-line"></span>
-            <span className="burger-line"></span>
-          </div>
+          </div> */}
         </nav>
 
 
