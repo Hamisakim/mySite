@@ -38,7 +38,7 @@ $hoverBlue: rgb(0, 255, 242);
 body {
   // height: 100vh;
   overflow: auto;
-  overflow-x: hidden;
+  overflow-x: hidden  !important;
   font-family: "Varela Round", sans-serif;
   color: $textColor;
   overscroll-behavior: none;
@@ -181,8 +181,6 @@ body {
     border-radius: 50px;
     box-shadow: 0px 0px 10px 0px $hoverBlue;
 
-
-
     h1 {
       font-size: 50px;
     }
@@ -222,7 +220,7 @@ body {
     // align-items: center;
     // flex-direction: column;
     h1 {
-      font-size: 50px;
+      font-size: 3rem;
       // background-color: rgba(9, 39, 135, 0.612)
     }
     p {
@@ -308,6 +306,12 @@ body {
       // text-align: right;
       img {
         box-shadow: 0px 0px 10px 0px rgb(255, 0, 0);
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      .project-details-container {
+        width: 80%;
+        h1{}
       }
     }
   }
@@ -552,4 +556,22 @@ body {
   max-height: 5750px;
   top: 0;
   z-index: 0;
+}
+body {
+  overflow-x: hidden  !important;
+}html, body {
+  overflow-x: hidden;
+}
+body {
+  width:100%;
+}
+@media only screen and (max-width: 768px) {
+  .fish {
+    position: absolute;
+    z-index: 2;
+    width: 40%;
+    img {
+      width: 6rem;
+    }
+}
 }
