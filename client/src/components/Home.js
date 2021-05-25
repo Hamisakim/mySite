@@ -144,6 +144,7 @@ const Home = () => {
             <p>
               {brandStatement}
               <br/>
+              <br/>
               <a href='#more-about'>Learn  more</a>
             </p>
           </div>

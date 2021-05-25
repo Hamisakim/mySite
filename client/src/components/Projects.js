@@ -3,6 +3,8 @@ import ScrollAnimation from 'react-animate-on-scroll'
 import monoMelodyImg from '../assets/MonoMelody.gif'
 import doodlerImg from '../assets/doodler.gif'
 import HungrySharkImg from '../assets/hungryshark.gif'
+import thePantheon from '../assets/the-pantheon.png'
+
 import DevIcon from 'devicon-react-svg'
 import express from '../assets/expressBlack.svg'
 
@@ -143,6 +145,7 @@ const Projects = () => {
                 <DevIcon className='built-with-icon' icon='javascript' />
                 <DevIcon className='built-with-icon' icon='css3' />
                 <DevIcon className='built-with-icon' icon='html5' />
+
               </div>
             </p>
             <a href='https://hamisakim.github.io/sei-project-one/'>
@@ -153,6 +156,28 @@ const Projects = () => {
       </ScrollAnimation >
     
     
+
+      <ScrollAnimation animateIn='animate__fadeInRight'
+        animateOut='animate__fadeOutRight'
+        offset={0} >
+        <div>
+          <div className='hungry-shark project-details-container'>
+            <h1>The Pantheon<a href='https://github.com/Hamisakim/The-Pantheon'><DevIcon className='devicon-project' icon='github_badge' /></a></h1>
+            <p>See the family tree of ancient Greek Gods and Heroes<br/> 48 Hour Pair-coded Hackathon  <br/>
+              <div className='built-with animate__fadeOutLeft'>
+                <DevIcon className='built-with-icon' icon='javascript' />
+                <DevIcon className='built-with-icon' icon='react' />
+                <DevIcon className='built-with-icon' icon='sass' />  
+              </div>
+            </p>
+            <a href='https://thepantheon.netlify.app/'>
+              <img src={thePantheon} />
+            </a>
+          </div>
+        </div>
+      </ScrollAnimation >
+
+
     
     
     
