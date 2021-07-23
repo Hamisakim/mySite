@@ -2,6 +2,7 @@
 import React from 'react'
 import { layoutGenerator } from 'react-break'
 import '../styles/navbar.scss'
+import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss'
 const Navbar = () => {
   // get break point and make hidden in here or in csss? 
   // show lines on break point
@@ -26,19 +27,18 @@ const Navbar = () => {
   console.log('🐝 ~ isActive', isActive)
 
   const handleBurger = () => {
-    console.log('clicked')
     setIsActive(!isActive)
   }
 
 
   return (
     <>
- 
+
       <OnMobile>
 
         <nav className='mob-nav'>
           <div className=''>
-            <button 
+            <button
               className={`hamburger--collapse hamburger ${isActive ? 'is-active' : ''}`}
               type="button"
               onClick={handleBurger}
