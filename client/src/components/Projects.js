@@ -86,7 +86,7 @@ const Projects = () => {
         offset={200} >
         <div>
           <div className='doodler project-details-container'>
-            <h1>Doodler<a href='https://github.com/Hamisakim/doodle'><DevIcon className='devicon-project' icon='github_badge' /></a></h1>
+            <h1>Doodler<a target="_blank" rel="noreferrer" href='https://github.com/Hamisakim/doodle' ><DevIcon className='devicon-project' icon='github_badge' /></a></h1>
             <p>A social site to create and share your best doodles!
               <br/>
              1-week group
@@ -100,7 +100,7 @@ const Projects = () => {
 
               </div>
             </p>
-            <a href='https://doodler.netlify.app/'>
+            <a target="_blank" rel="noreferrer"href='https://doodler.netlify.app/'>
               <img className='doodler-img' src={doodlerImg} />
             </a>
           </div>
@@ -137,7 +137,7 @@ const Projects = () => {
         offset={0} >
         <div>
           <div className='hungry-shark project-details-container'>
-            <h1>Hungry Shark<a href='https://github.com/Hamisakim/HungryShark'><DevIcon className='devicon-project' icon='github_badge' /></a></h1>
+            <h1>Hungry Shark<a target="_blank" rel="noreferrer"href='https://github.com/Hamisakim/HungryShark'><DevIcon className='devicon-project' icon='github_badge' /></a></h1>
             <p>Pac-man with a twist <br/>1 week solo  <br/>
               <div className='built-with animate__fadeOutLeft'>
                 <DevIcon className='built-with-icon' icon='javascript' />
@@ -145,7 +145,7 @@ const Projects = () => {
                 <DevIcon className='built-with-icon' icon='html5' />
               </div>
             </p>
-            <a href='https://hamisakim.github.io/sei-project-one/'>
+            <a target="_blank" rel="noreferrer"href='https://hamisakim.github.io/sei-project-one/'>
               <img src={HungrySharkImg} />
             </a>
           </div>
