@@ -1,4 +1,2 @@
 # mySite
-# samihakim.com
-
-<a href="samihakim.com" target="_blank">samihakim.com!</a>
+[I'm an inline-style link](https://www.samihakim.com)
