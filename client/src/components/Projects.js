@@ -57,7 +57,7 @@ const Projects = () => {
         <a href='#projects'><h1 className='project-header'> Projects</h1></a>
       </ScrollAnimation>
 
-      <ScrollAnimation animateIn='animate__fadeInLeft'
+      {/* <ScrollAnimation animateIn='animate__fadeInLeft'
         animateOut='animate__fadeOutLeft'
         offset={200} >
         
@@ -81,7 +81,7 @@ const Projects = () => {
             </a>
           </p> 
         </div>
-      </ScrollAnimation >
+      </ScrollAnimation > */}
  
       <ScrollAnimation animateIn='animate__fadeInRight'
         animateOut='animate__fadeOutRight'
