@@ -58,6 +58,36 @@ const Projects = () => {
         <a href='#projects'><h1 className='project-header'> Projects</h1></a>
       </ScrollAnimation>
 
+          
+      {/* <ScrollAnimation animateIn='animate__fadeInLeft'
+        animateOut='animate__fadeOutLeft'
+        offset={200} >
+        
+        <div className='spotify-quiz project-details-container'>
+          <h1>MonoMelody.<a href='https://github.com/Hamisakim/MonoMelody'>
+            <DevIcon className='devicon-project' icon='github_badge' />
+          </a></h1>
+
+          <p>Create and share melodies with our built in sythesiser! 
+            <br/>
+            1-week duo
+          
+            <div className='built-with'>       
+              <DevIcon className='built-with-icon' icon='python' />  
+              <DevIcon className='built-with-icon' icon='django' />  
+              <DevIcon className='built-with-icon' icon='react' />  
+              <DevIcon className='built-with-icon' icon='sass' />  
+            </div>  
+            <a href='https://monomelody.herokuapp.com/'>
+              <img  src={monoMelodyImg} />
+            </a>
+          </p> 
+        </div>
+      </ScrollAnimation > */}
+ 
+
+
+
       {/* <ScrollAnimation animateIn='animate__fadeInLeft'
         animateOut='animate__fadeOutLeft'
         offset={200} >
