@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React,{ useEffect, useState } from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
 import monoMelodyImg from '../assets/MonoMelody.gif'

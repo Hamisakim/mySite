@@ -1,6 +1,5 @@
 import React from 'react'
-import ScrollAnimation from
-  'react-animate-on-scroll'
+import ScrollAnimation from  'react-animate-on-scroll'
 import 'animate.css/animate.min.css'
 import express from '../assets/express.svg'
 const Tech = ({ DevIcon }) => {
