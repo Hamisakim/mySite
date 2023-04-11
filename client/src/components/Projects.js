@@ -119,7 +119,7 @@ const Projects = () => {
         offset={200} >
         <div>
           <div className='doodler project-details-container'>
-            <h1>Doodler<a href='https://github.com/Hamisakim/doodle'><DevIcon className='devicon-project' icon='github_badge' /></a></h1>
+            <h1>Doodler<a href='https://github.com/Hamisakim/doodle' target='_blank' rel="noreferrer"><DevIcon className='devicon-project' icon='github_badge' /></a></h1>
             <p>A social site to create and share your best doodles!
               <br/>
              1-week group
@@ -133,7 +133,7 @@ const Projects = () => {
 
               </div>
             </p>
-            <a href='https://doodler.netlify.app/'>
+            <a href='https://doodler.netlify.app/' target='_blank' rel="noreferrer">
               <img className='doodler-img' src={doodlerImg} />
             </a>
           </div>
@@ -170,7 +170,7 @@ const Projects = () => {
         offset={0} >
         <div>
           <div className='hungry-shark project-details-container'>
-            <h1>Hungry Shark<a href='https://github.com/Hamisakim/HungryShark'><DevIcon className='devicon-project' icon='github_badge' /></a></h1>
+            <h1>Hungry Shark<a href='https://github.com/Hamisakim/HungryShark' target='_blank' rel="noreferrer"><DevIcon className='devicon-project' icon='github_badge' /></a></h1>
             <p>Pac-man with a twist <br/>1 week solo  <br/>
               <div className='built-with animate__fadeOutLeft'>
                 <DevIcon className='built-with-icon' icon='javascript' />
@@ -179,7 +179,7 @@ const Projects = () => {
 
               </div>
             </p>
-            <a href='https://hamisakim.github.io/sei-project-one/'>
+            <a href='https://hamisakim.github.io/sei-project-one/' target='_blank' rel="noreferrer">
               <img src={HungrySharkImg} />
             </a>
           </div>
@@ -193,7 +193,7 @@ const Projects = () => {
         offset={0} >
         <div>
           <div className='hungry-shark project-details-container'>
-            <h1>The Pantheon<a href='https://github.com/Hamisakim/The-Pantheon'><DevIcon className='devicon-project' icon='github_badge' /></a></h1>
+            <h1>The Pantheon<a href='https://github.com/Hamisakim/The-Pantheon' target='_blank' rel="noreferrer"><DevIcon className='devicon-project' icon='github_badge' /></a></h1>
             <p>See the family tree of ancient Greek Gods and Heroes<br/> 48 Hour Pair-coded Hackathon  <br/>
               <div className='built-with animate__fadeOutLeft'>
                 <DevIcon className='built-with-icon' icon='javascript' />
@@ -201,7 +201,7 @@ const Projects = () => {
                 <DevIcon className='built-with-icon' icon='sass' />  
               </div>
             </p>
-            <a href='https://thepantheon.netlify.app/'>
+            <a href='https://thepantheon.netlify.app/' target='_blank' rel="noreferrer">
               <img src={thePantheon} />
             </a>
           </div>
