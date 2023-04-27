@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
+/* eslint-disable no-unused-vars */
 import ScrollAnimation from 'react-animate-on-scroll'
 import monoMelodyImg from '../assets/MonoMelody.gif'
 import doodlerImg from '../assets/doodler.gif'
 import HungrySharkImg from '../assets/hungryshark.gif'
+import thePantheon from '../assets/the-pantheon.png'
+
 import DevIcon from 'devicon-react-svg'
 import express from '../assets/expressBlack.svg'
-import thePantheon from '../assets/the-pantheon.png'
+
 
 import shark from './fish/shark.gif'
 
@@ -56,29 +59,30 @@ const Projects = () => {
         <a href='#projects'><h1 className='project-header'> Projects</h1></a>
       </ScrollAnimation>
 
-      <ScrollAnimation animateIn='animate__fadeInLeft'
+          
+      {/* <ScrollAnimation animateIn='animate__fadeInLeft'
         animateOut='animate__fadeOutLeft'
         offset={200} >
-
-        <div className='monomelody project-details-container'>
+        
+        <div className='spotify-quiz project-details-container'>
           <h1>MonoMelody.<a href='https://github.com/Hamisakim/MonoMelody'>
             <DevIcon className='devicon-project' icon='github_badge' />
           </a></h1>
 
-          <p>Create and share melodies with our built in sythesiser!
-            <br />
+          <p>Create and share melodies with our built in sythesiser! 
+            <br/>
             1-week duo
-
-            <div className='built-with'>
-              <DevIcon className='built-with-icon' icon='python' />
-              <DevIcon className='built-with-icon' icon='django' />
-              <DevIcon className='built-with-icon' icon='react' />
-              <DevIcon className='built-with-icon' icon='sass' />
-            </div>
+          
+            <div className='built-with'>       
+              <DevIcon className='built-with-icon' icon='python' />  
+              <DevIcon className='built-with-icon' icon='django' />  
+              <DevIcon className='built-with-icon' icon='react' />  
+              <DevIcon className='built-with-icon' icon='sass' />  
+            </div>  
             <a href='https://monomelody.herokuapp.com/'>
-              <img src={monoMelodyImg} />
+              <img  src={monoMelodyImg} />
             </a>
-          </p>
+          </p> 
         </div>
       </ScrollAnimation >
 
@@ -127,11 +131,11 @@ const Projects = () => {
 
 
             {/* <div className='fish shark animate__animated animate__fadeInLeft '> */}
-            <img src={shark} />
+      {/* <img src={shark} />
 
           </div>
-        </ScrollAnimation>
-      </>
+        </ScrollAnimation> */}
+      {/* </> */}
 
       <ScrollAnimation animateIn='animate__fadeInLeft'
         animateOut='animate__fadeOutLeft'
@@ -144,6 +148,7 @@ const Projects = () => {
                 <DevIcon className='built-with-icon' icon='javascript' />
                 <DevIcon className='built-with-icon' icon='css3' />
                 <DevIcon className='built-with-icon' icon='html5' />
+
               </div>
             </p>
             <a target="_blank" rel="noreferrer" href='https://hamisakim.github.io/sei-project-one/'>

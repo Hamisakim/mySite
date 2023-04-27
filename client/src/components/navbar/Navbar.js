@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import { layoutGenerator } from 'react-break'
+
 import '../styles/navbar.scss'
-import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss'
+import '../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss'
+
 const Navbar = () => {
   // get break point and make hidden in here or in csss? 
   // show lines on break point

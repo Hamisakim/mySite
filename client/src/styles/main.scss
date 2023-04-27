@@ -40,6 +40,7 @@ $hoverBlue: rgb(0, 255, 242);
 }
 
 body {
+  max-width: 100vw;
   // height: 100vh;
   overflow: auto;
   overflow-x: hidden !important;
@@ -77,6 +78,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.5rem;
     a {
       padding: 4px;
       margin: 0 10px;
@@ -91,7 +93,23 @@ body {
       color: $hoverBlue;
     }
   }
+
+  // @media only screen and (max-width: 768px) {
+  //   // @import "bulma/sass/grid/columns.sass";
+  //   .navbar-items{
+  //     display:none;
+  //   }
+
+
+  // }
 }
+
+
+
+
+
+
+
 .homepage {
   margin-top: 3rem;
   a {
@@ -247,7 +265,7 @@ body {
   .project-details-container {
     z-index: 500;
     position: relative;
-    width: 50%;
+    width: 85%;
     margin: 0 auto;
     margin-top: 5rem;
     padding-top: 2rem;
@@ -336,6 +354,13 @@ body {
       h1 {
       }
     }
+    //!________________________________for responsiveness___________
+    @media only screen and (max-width: 768px) {
+      .project-details-container {
+        width: 80%;
+      }
+    }
+    //!---------------------------------------------------------------
   }
 }
 .tech {
@@ -498,6 +523,9 @@ body {
         }
       }
     }
+
+    @media only screen and (max-width: 768px) {
+    }
   }
 }
 .more-about {
@@ -522,6 +550,12 @@ body {
   @media only screen and (max-width: 768px) {
     p {
       text-align: center;
+    }
+    @media only screen and (max-width: 768px) {
+      p {
+        font-size: 20px;
+        width: 100%;
+      }
     }
   }
 }

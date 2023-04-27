@@ -1,17 +1,19 @@
-@import "./main.scss";
-// @import 'node_modules/hamburgers/hamburgers.scss';
+
+@import "../../styles/main.scss";
+@import 'node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+// client/node_modules/hamburgers/_sass/hamburgers/hamburgers.scss
 
 * {
   margin: 0;
   padding: 0;
 }
 .mob-nav {
-  z-index: 1000;
+  z-index: 50000;
   position: fixed; //!
   min-height: 1rem; //* don't change from min for the dropdown
   width:100vw;
 
-top: 0;
+  top: 0;
   // position: relative;
   background-color: $lighterBlue;
   // display: flex;
